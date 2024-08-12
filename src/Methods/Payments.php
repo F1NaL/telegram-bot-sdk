@@ -101,4 +101,24 @@ trait Payments
     {
         return $this->post('answerPreCheckoutQuery', $params)->getResult();
     }
+
+    /**
+     * Use this method to create a link for an invoice. Returns the created invoice link as String on success
+     *
+     * <code>
+     * $params = [
+     *      'title'  => '',  // string - Required. Product name, 1-32 characters
+     *      'description'  => '',  // string - Required. Product description, 1-255 characters
+     * </code>
+     *
+     * @link https://core.telegram.org/bots/api#createinvoicelink
+     *
+     * @throws TelegramSDKException
+     */
+    public function createInvoiceLink(array $params): string
+    {
+        $response = $this->post('createInvoiceLink', $params);
+
+        return $response->getDecodedBody()['result'];
+    }
 }

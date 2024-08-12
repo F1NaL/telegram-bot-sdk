@@ -118,6 +118,7 @@ use Telegram\Bot\BotsManager;
  * @method static bool setMessageReaction(array $params)
  * @method static void setPassportDataErrors(array $params)
  * @method static \Telegram\Bot\Objects\Message sendInvoice(array $params)
+ * @method static \Telegram\Bot\Objects\Message createInvoiceLink(array $params)
  * @method static bool answerShippingQuery(array $params)
  * @method static bool answerPreCheckoutQuery(array $params)
  * @method static bool answerCallbackQuery(array $params)
